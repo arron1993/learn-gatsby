@@ -2,15 +2,17 @@ import React from 'react'
 
 import Header from "./header"
 
-class Layout extends React.Component {
-    render(children) {
-        return (
-            <>
-                <Header />
-                <main>{children}</main>
-            </>
-        )
-    }
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+const Layout = ({ children }) => {
+    return (
+        <>
+            <Header />
+            <main className="container border">
+                {children}
+            </main>
+        </>
+    )
 }
 
 export default Layout

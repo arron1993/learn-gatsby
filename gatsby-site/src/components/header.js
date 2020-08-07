@@ -1,11 +1,21 @@
 import React from "react"
 
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+
 class Header extends React.Component {
     render() {
         return (
-            <div style={{ backgroundColor: "red", width: "100%", height: "5rem" }}>
-
-            </div>
+            <Navbar bg="light" expand="lg">
+                <Navbar.Brand href="#home">Some Website</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/test">test</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
         );
     }
 }
